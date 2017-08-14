@@ -42,7 +42,7 @@ fi
 if [ -f $ENV_DIR/GOOGLE_CHROME_CHANNEL ]; then
   channel=$(cat $ENV_DIR/GOOGLE_CHROME_CHANNEL)
 else
-  channel=unstable
+  channel=stable
 fi
 
 # Setup bin and shim locations for desired channel, and detect invalid channels
@@ -68,7 +68,7 @@ esac
 
 indent "Installing Google Chrome from the $channel channel."
 
-PACKAGES="https://dl.google.com/linux/direct/google-chrome-${channel}_current_amd64.deb libxss1 xvfb"
+PACKAGES="https://archive.org/download/google-chrome-stable_48.0.2564.116-1_i386/google-chrome-stable_48.0.2564.116-1_i386.deb libxss1 xvfb"
 
 APT_CACHE_DIR="$CACHE_DIR/apt/cache"
 APT_STATE_DIR="$CACHE_DIR/apt/state"
