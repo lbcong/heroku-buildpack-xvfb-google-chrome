@@ -23,6 +23,8 @@ echo "tham sooooooo 0 $0"
 
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
+echo "tham soLP_DIR 0 $LP_DIR"
+
 function error() {
   echo " !     $*" >&2
 }
