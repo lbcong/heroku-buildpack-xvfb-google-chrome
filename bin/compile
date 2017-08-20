@@ -12,6 +12,15 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
+topic "tham sooooooo 1 $1"
+
+topic "tham sooooooo 2 $2"
+
+topic "tham sooooooo 3 $3"
+
+topic "tham sooooooo 0 $0"
+
+
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 function error() {
@@ -68,7 +77,7 @@ esac
 
 indent "Installing Google Chrome from the $channel channel."
 
-PACKAGES="https://archive.org/download/google-chrome-stable_48.0.2564.116-1_i386/google-chrome-stable_48.0.2564.116-1_i386.deb libxss1 xvfb"
+PACKAGES="https://dl.google.com/linux/direct/google-chrome-${channel}_current_amd64.deb libxss1 xvfb"
 
 APT_CACHE_DIR="$CACHE_DIR/apt/cache"
 APT_STATE_DIR="$CACHE_DIR/apt/state"
