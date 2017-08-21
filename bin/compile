@@ -93,6 +93,7 @@ topic "Updating apt caches"
 apt-get $APT_OPTIONS update | indent
 
 for PACKAGE in $PACKAGES; do
+topic "Fetchingxx $PACKAGE"
   if [[ $PACKAGE == *deb ]]; then
     PACKAGE_NAME=$(basename $PACKAGE .deb)
     PACKAGE_FILE=$APT_CACHE_DIR/archives/$PACKAGE_NAME.deb
